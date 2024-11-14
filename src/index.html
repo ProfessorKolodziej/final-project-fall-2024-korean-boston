@@ -16,8 +16,12 @@
 <body>
 	<main class="content-container">
 		<h1>Korean Seoul Food in Boston</h1>
-		<section>Start</section>
-		<a href="filter1.html">Go to Next Page</a>
+		<button class="start-button" onclick="startPage()">Start</button>
+		<script>
+			function startPage() {
+				window.location.href = "filter1.html";
+			}
+		</script>
 		<img src="images/intro page food.png" class="intro-food-image">
 		<img src="images/chopsticks.png" class="chospticks">
 	</main>
