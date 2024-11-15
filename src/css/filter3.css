@@ -1,0 +1,56 @@
+/* General body and container styling */
+body {
+	font-family: 'Arial', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-color: #e6d8c4;
+}
+
+.content-container {
+	text-align: center;
+	width: 100%;
+	max-width: 1280px;
+}
+
+/* Title styling */
+h1 {
+	font-family: 'Georgia', serif;
+	font-size: 10em;
+	font-weight: bold;
+	color: #67a9a6;
+	margin-bottom: 60px;
+}
+
+/* Price button styling */
+.price-button {
+	font-family: 'Georgia', serif;
+	font-size: 4.5em;
+	font-weight: bold;
+	color: #000;
+	background-color: #67a9a6;
+	border: 3px solid #000;
+	border-radius: 10px;
+	padding: 20px 30px;
+	margin: 20px 15px;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Button icon styling */
+.price-button::before {
+	font-size: 2em;
+	display: block;
+}
+
+.price-button:hover {
+	background-color: #55898d;
+	transform: scale(1.05);
+}
+
+/* Remove button outline */
+.price-button:focus {
+	outline: none;
+}

@@ -6,10 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Update your description here" />
-	<title>Choose a Location</title>
-	<!--
-		This is where you should link your CSS file.
-	-->
+	<title>Filter Page</title>
+	<link href="css/filter2.css" rel="stylesheet">
 </head>
 
 <body>
@@ -27,12 +25,25 @@
 		</ul>
 	</main>
 
+	<script>
+		// Get all query parameters from the current URL
+		const urlParams = new URLSearchParams(window.location.search);
 
-
-	<!--
-		This is where you should link your JS file.
-	-->
-
+		// Append all query parameters to the links along with the button value
+		const links = document.querySelectorAll('a[href="filter3.html"]');
+		links.forEach(link => {
+			const button = link.querySelector('button');
+			const buttonValue = button ? button.textContent : '';
+			let newHref = link.href;
+			if (urlParams.toString()) {
+				newHref += `?${urlParams.toString()}`;
+			}
+			if (buttonValue) {
+				newHref += `${urlParams.toString() ? '&' : '?'}dish=${encodeURIComponent(buttonValue)}`;
+			}
+			link.href = newHref;
+		});
+	</script>
 </body>
 
 </html>

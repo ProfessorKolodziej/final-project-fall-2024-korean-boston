@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Update your description here" />
+	<title>Choose a Restaurant</title>
+	<!--
+		This is where you should link your CSS file.
+	-->
+</head>
+
+<body>
+	<main class="content-container">
+		<h1>Restaurant options for you</h1>
+		<ul class="restaurant-list"></ul>
+	</main>
+
+
+	<script>
+		const urlParams = new URLSearchParams(window.location.search);
+		const locationParam = decodeURIComponent(urlParams.get('location'));
+		const dish = decodeURIComponent(urlParams.get('dish'));
+		const price = decodeURIComponent(urlParams.get('price'));
+
+		const resaurantMapping = {
+			"Allston": {
+				"K-BBQ": {
+					"$": [
+						{
+							"name": "Coreanos Allston",
+							"website": "https://www.coreanosallston.com/"
+						},
+						{
+							"name": "Kaju Tofu House",
+							"website": "https://www.kajutofuhouse.com/"
+						},
+						{
+							"name": "Seoul Soulongtang",
+							"website": "https://www.seoulsoulongtang.com/"
+						}
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Stews": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Noodles": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Traditional": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Rice Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Seafood Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Meat Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"K-Street Food": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+			},
+			"Back-Bay": {
+				"K-BBQ": {
+					"$": [
+						{
+							"name": "Coreanos Allston",
+							"website": "https://www.coreanosallston.com/"
+						},
+						{
+							"name": "Kaju Tofu House",
+							"website": "https://www.kajutofuhouse.com/"
+						},
+						{
+							"name": "Seoul Soulongtang",
+							"website": "https://www.seoulsoulongtang.com/"
+						}
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Stews": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Noodles": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Traditional": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Rice Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Seafood Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Meat Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"K-Street Food": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+			},
+			"Fenway-Kenmore": {
+				"K-BBQ": {
+					"$": [
+						{
+							"name": "Coreanos Allston",
+							"website": "https://www.coreanosallston.com/"
+						},
+						{
+							"name": "Kaju Tofu House",
+							"website": "https://www.kajutofuhouse.com/"
+						},
+						{
+							"name": "Seoul Soulongtang",
+							"website": "https://www.seoulsoulongtang.com/"
+						}
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Stews": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Noodles": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Traditional": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Rice Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Seafood Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Meat Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"K-Street Food": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+			},
+			"East Boston": {
+				"K-BBQ": {
+					"$": [
+						{
+							"name": "Coreanos Allston",
+							"website": "https://www.coreanosallston.com/"
+						},
+						{
+							"name": "Kaju Tofu House",
+							"website": "https://www.kajutofuhouse.com/"
+						},
+						{
+							"name": "Seoul Soulongtang",
+							"website": "https://www.seoulsoulongtang.com/"
+						}
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Stews": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Noodles": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Traditional": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Rice Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Seafood Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Meat Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"K-Street Food": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+			},
+			"Downtown": {
+				"K-BBQ": {
+					"$": [
+						{
+							"name": "Coreanos Allston",
+							"website": "https://www.coreanosallston.com/"
+						},
+						{
+							"name": "Kaju Tofu House",
+							"website": "https://www.kajutofuhouse.com/"
+						},
+						{
+							"name": "Seoul Soulongtang",
+							"website": "https://www.seoulsoulongtang.com/"
+						}
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Stews": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Noodles": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Traditional": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Rice Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Seafood Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Meat Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"K-Street Food": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+			},
+			"South End": {
+				"K-BBQ": {
+					"$": [
+						{
+							"name": "Coreanos Allston",
+							"website": "https://www.coreanosallston.com/"
+						},
+						{
+							"name": "Kaju Tofu House",
+							"website": "https://www.kajutofuhouse.com/"
+						},
+						{
+							"name": "Seoul Soulongtang",
+							"website": "https://www.seoulsoulongtang.com/"
+						}
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Stews": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Noodles": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Traditional": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Rice Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Seafood Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Meat Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"K-Street Food": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+			},
+			"Cambridge": {
+				"K-BBQ": {
+					"$": [
+						{
+							"name": "Coreanos Allston",
+							"website": "https://www.coreanosallston.com/"
+						},
+						{
+							"name": "Kaju Tofu House",
+							"website": "https://www.kajutofuhouse.com/"
+						},
+						{
+							"name": "Seoul Soulongtang",
+							"website": "https://www.seoulsoulongtang.com/"
+						}
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Stews": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Noodles": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Traditional": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Rice Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Seafood Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Meat Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"K-Street Food": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+			},
+			"Brookline": {
+				"K-BBQ": {
+					"$": [
+						{
+							"name": "Coreanos Allston",
+							"website": "https://www.coreanosallston.com/"
+						},
+						{
+							"name": "Kaju Tofu House",
+							"website": "https://www.kajutofuhouse.com/"
+						},
+						{
+							"name": "Seoul Soulongtang",
+							"website": "https://www.seoulsoulongtang.com/"
+						}
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Stews": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Noodles": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Traditional": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Rice Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Seafood Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"Meat Dishes": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+				"K-Street Food": {
+					"$": [
+					],
+					"$$": [
+					],
+					"$$$": [
+					],
+				},
+			},
+		}
+
+		console.log(locationParam)
+		console.log(dish)
+		console.log(price)
+		console.log(resaurantMapping[locationParam][dish][price])
+		const restaurants = resaurantMapping[locationParam][dish][price];
+		const restaurantList = document.querySelector('.restaurant-list');
+
+		restaurants.forEach(restaurant => {
+			const listItem = document.createElement('li');
+			const link = document.createElement('a');
+			link.href = restaurant.website;
+			link.target = "_blank";
+			const button = document.createElement('button');
+			button.className = 'restaurant-button';
+			button.textContent = restaurant.name;
+			link.appendChild(button);
+			listItem.appendChild(link);
+			restaurantList.appendChild(listItem);
+		});
+
+	</script>
+
+</body>
+
+</html>

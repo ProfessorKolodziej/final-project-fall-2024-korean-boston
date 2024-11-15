@@ -7,22 +7,43 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Update your description here" />
 	<title>Choose a Location</title>
-	<!--
-		This is where you should link your CSS file.
-	-->
+	<link href="css/filter3.css" rel="stylesheet">
 </head>
 
 <body>
 	<main class="content-container">
 		<h1>Choose Your Price Range</h1>
-		<section>Affordable</section>
-		<section>Moderate</section>
-		<section>Expensive</section>
+		<div class="price-option">
+			<a href="results.html"><button class="price-button">$</button></a>
+		</div>
+		<div class="price-option">
+			<a href="results.html"><button class="price-button">$$</button></a>
+		</div>
+		<div class="price-option">
+			<a href="results.html"><button class="price-button">$$$</button></a>
+		</div>
 	</main>
 
-	<!--
-		This is where you should link your JS file.
-	-->
+
+	<script>
+		// Get all query parameters from the current URL
+		const urlParams = new URLSearchParams(window.location.search);
+
+		// Append all query parameters to the links along with the button value
+		const links = document.querySelectorAll('a[href="results.html"]');
+		links.forEach(link => {
+			const button = link.querySelector('button');
+			const buttonValue = button ? button.textContent : '';
+			let newHref = link.href;
+			if (urlParams.toString()) {
+				newHref += `?${urlParams.toString()}`;
+			}
+			if (buttonValue) {
+				newHref += `${urlParams.toString() ? '&' : '?'}price=${encodeURIComponent(buttonValue)}`;
+			}
+			link.href = newHref;
+		});
+	</script>
 
 </body>
 

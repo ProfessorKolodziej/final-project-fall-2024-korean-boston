@@ -1,0 +1,62 @@
+/* Basic body styling */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f5e9d7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	position: relative;
+}
+
+/* Container for the content */
+.content-container {
+	text-align: center;
+}
+
+/* Title styling */
+h1 {
+	font-size: 2.5em;
+	color: #5a9e9e;
+	margin-bottom: 20px;
+}
+
+/* Styling for the list of buttons */
+.location-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+	padding: 0;
+	list-style-type: none;
+}
+
+/* Button styling */
+.location-button {
+	background-color: #5a9e9e;
+	color: #000;
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 10px 20px;
+	border: 2px solid #333;
+	border-radius: 15px;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for buttons */
+.location-button:hover {
+	background-color: #4b8c8c;
+	transform: scale(1.05);
+}
+
+/* Back arrow styling */
+.back-arrow {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	font-size: 2em;
+	color: #333;
+	text-decoration: none;
+}
