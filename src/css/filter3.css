@@ -6,7 +6,7 @@ body {
 	align-items: center;
 	height: 100vh;
 	margin: 0;
-	background-color: #e6d8c4;
+	background-color: #f5e9d7;
 }
 
 .content-container {
@@ -21,21 +21,32 @@ h1 {
 	font-size: 10em;
 	font-weight: bold;
 	color: #67a9a6;
-	margin-bottom: 60px;
+	margin-bottom: 200px;
+	margin-top: 10px;
+}
+
+
+.price-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 200px;
 }
 
 /* Price button styling */
 .price-button {
 	font-family: 'Georgia', serif;
-	font-size: 4.5em;
+	font-size: 6em;
 	font-weight: bold;
 	color: #000;
 	background-color: #67a9a6;
 	border: 3px solid #000;
 	border-radius: 10px;
-	padding: 20px 30px;
+	padding: 40px 50px;
 	margin: 20px 15px;
 	cursor: pointer;
+	width: 270px;
+	height: 280px;
 	transition: background-color 0.3s, transform 0.3s;
 }
 

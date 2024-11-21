@@ -13,23 +13,17 @@
 <body>
 	<main class="content-container">
 		<h1>Choose Your Price Range</h1>
-		<div class="price-option">
+		<div class="price-container">
 			<a href="results.html"><button class="price-button">$</button></a>
-		</div>
-		<div class="price-option">
 			<a href="results.html"><button class="price-button">$$</button></a>
-		</div>
-		<div class="price-option">
 			<a href="results.html"><button class="price-button">$$$</button></a>
 		</div>
 	</main>
 
 
 	<script>
-		// Get all query parameters from the current URL
 		const urlParams = new URLSearchParams(window.location.search);
 
-		// Append all query parameters to the links along with the button value
 		const links = document.querySelectorAll('a[href="results.html"]');
 		links.forEach(link => {
 			const button = link.querySelector('button');

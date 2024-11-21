@@ -17,9 +17,9 @@ body {
 
 /* Title styling */
 h1 {
-	font-size: 2.5em;
+	font-size: 7em;
 	color: #5a9e9e;
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 }
 
 /* Styling for the list of buttons */
@@ -36,11 +36,11 @@ h1 {
 .dish-button {
 	background-color: #5a9e9e;
 	color: #000;
-	font-size: 1.2em;
+	font-size: 3.5em;
 	font-weight: bold;
-	padding: 10px;
-	width: 120px;
-	height: 120px;
+	padding: 10px 20ps;
+	width: 400px;
+	height: 180px;
 	border: 2px solid #333;
 	border-radius: 15px;
 	cursor: pointer;
