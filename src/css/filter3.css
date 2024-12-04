@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+
+
 /* General body and container styling */
 body {
-	font-family: 'Arial', sans-serif;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
 	margin: 0;
 	background-color: #f5e9d7;
+	border: 25px solid #5a9e9e;
+	/* Outer teal border */
+	box-sizing: border-box;
+	/* Ensure border is included in dimensions */
+	padding: 20px;
+	/* Space between content and border */
 }
 
 .content-container {
@@ -17,11 +26,11 @@ body {
 
 /* Title styling */
 h1 {
-	font-family: 'Georgia', serif;
-	font-size: 10em;
-	font-weight: bold;
+	font-family: Caprasimo, sans-serif;
+	font-weight: 400;
+	font-size: 9em;
 	color: #67a9a6;
-	margin-bottom: 200px;
+	margin-bottom: 250px;
 	margin-top: 10px;
 }
 
@@ -36,17 +45,17 @@ h1 {
 /* Price button styling */
 .price-button {
 	font-family: 'Georgia', serif;
-	font-size: 6em;
-	font-weight: bold;
+	font-size: 12em;
+	font-family: Caprasimo, sans-serif;
 	color: #000;
 	background-color: #67a9a6;
-	border: 3px solid #000;
-	border-radius: 10px;
-	padding: 40px 50px;
+	border: 7px solid #000;
+	border-radius: 80px;
+	padding: 30px 20px;
 	margin: 20px 15px;
 	cursor: pointer;
-	width: 270px;
-	height: 280px;
+	width: 600px;
+	height: 500px;
 	transition: background-color 0.3s, transform 0.3s;
 }
 

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	background-color: #f5e6d5;
+	/* Neutral beige background */
+	color: #333;
+	text-align: center;
+	padding: 20px;
+}
+
+h1 {
+	font-family: Caprasimo, sans-serif;
+	font-weight: 400;
+	font-size: 9rem;
+	margin-top: 80px;
+	color: #4ca3a3;
+	/* Teal color */
+	font-weight: bold;
+}
+
+.restaurant-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 70px;
+}
+
+.restaurant-list button {
+	background-color: #4ca3a3;
+	color: #000;
+	font-family: Caprasimo, sans-serif;
+	border: 5px solid #000;
+	border-radius: 50px;
+	width: 800px;
+	height: 300px;
+	padding: 10px 20px;
+	font-size: 5rem;
+	margin-top: 200px;
+	cursor: pointer;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.restaurant-list button:hover {
+	transform: scale(1.05);
+	/* Slight zoom effect on hover */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.arrow-back {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	font-size: 2rem;
+	color: #333;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.arrow-back:hover {
+	color: #000;
+}
+
+.start-over {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	font-size: 1rem;
+	color: #333;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.start-over:hover {
+	color: #000;
+}

@@ -14,36 +14,29 @@
 	<main class="content-container">
 		<h1>Choose a Korean Dish</h1>
 		<ul class="dish-list">
-			<li><a href="filter3.html"><button class="dish-button">K-BBQ</button></a></li>
-			<li><a href="filter3.html"><button class="dish-button">Stews</button></a></li>
-			<li><a href="filter3.html"><button class="dish-button">Noodles</button></a></li>
-			<li><a href="filter3.html"><button class="dish-button">Traditional</button></a></li>
-			<li><a href="filter3.html"><button class="dish-button">Rice Dishes</button></a></li>
-			<li><a href="filter3.html"><button class="dish-button">Seafood Dishes</button></a></li>
-			<li><a href="filter3.html"><button class="dish-button">Meat Dishes</button></a></li>
-			<li><a href="filter3.html"><button class="dish-button">K-Street Food</button></a></li>
+
+			<li><a href="filter3.html"><button class="dish-button"><img src="images/intro-page-food.png"
+							alt="K-BBQ"><span>K-BBQ</span></button></a></li>
+			<li><a href="filter3.html"><button class="dish-button"><img src="images/stews.webp"
+							alt="Stews"><span>Stews</span></button></a></li>
+			<li><a href="filter3.html"><button class="dish-button"><img src="images/noodle.png"
+							alt="Noodles"><span>Noodles</span></button></a></li>
+			<li><a href="filter3.html"><button class="dish-button"><img src="images/traditional.png"
+							alt="Traditional"><span>Traditional</span></button></a></li>
+			<li><a href="filter3.html"><button class="dish-button"><img src="images/ricedishes.png"
+							alt="Rice Dishes"><span>Rice Dishes</span></button></a></li>
+			<li><a href="filter3.html"><button class="dish-button"><img src="images/seafooddishes.png"
+							alt="Seafood Dishes"><span>Seafood Dishes</span></button></a></li>
+			<li><a href="filter3.html"><button class="dish-button"><img src="images/meatdishes.png"
+							alt="Meat Dishes"><span>Meat Dishes</span></button></a></li>
+			<li><a href="filter3.html"><button class="dish-button"><img src="images/kbbq.webp"
+							alt="K-Street Food"><span>K-Street Food</span></button></a></li>
 		</ul>
 	</main>
 
-	<script>
-		// Get all query parameters from the current URL
-		const urlParams = new URLSearchParams(window.location.search);
+	<script src="js/scripts.js"></script>
 
-		// Append all query parameters to the links along with the button value
-		const links = document.querySelectorAll('a[href="filter3.html"]');
-		links.forEach(link => {
-			const button = link.querySelector('button');
-			const buttonValue = button ? button.textContent : '';
-			let newHref = link.href;
-			if (urlParams.toString()) {
-				newHref += `?${urlParams.toString()}`;
-			}
-			if (buttonValue) {
-				newHref += `${urlParams.toString() ? '&' : '?'}dish=${encodeURIComponent(buttonValue)}`;
-			}
-			link.href = newHref;
-		});
-	</script>
+
 </body>
 
 </html>

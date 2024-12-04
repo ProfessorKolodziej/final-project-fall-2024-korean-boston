@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+
+
 /* Basic body styling */
 body {
-	font-family: Arial, sans-serif;
+	font-family: Caprasimo, sans-serif;
 	background-color: #f5e9d7;
 	display: flex;
 	justify-content: center;
@@ -8,6 +12,12 @@ body {
 	height: 100vh;
 	margin: 0;
 	position: relative;
+	border: 25px solid #5a9e9e;
+	/* Outer teal border */
+	box-sizing: border-box;
+	/* Ensure border is included in dimensions */
+	padding: 20px;
+	/* Space between content and border */
 }
 
 /* Container for the content */
@@ -15,41 +25,46 @@ body {
 	text-align: center;
 }
 
+
 /* Title styling */
 h1 {
-	font-size: 7em;
+	font-family: Caprasimo, sans-serif;
+	font-size: 9em;
+	font-weight: 400;
 	color: #5a9e9e;
-	margin-bottom: 200px;
+	margin-bottom: 250px;
 	margin-top: 10px;
 }
 
 /* Styling for the list of buttons */
-.location-list {
+.ambiance-list {
+	font-weight: 400;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 15px;
+	gap: 70px;
 	padding: 0;
 	list-style-type: none;
 }
 
 /* Button styling */
-.location-button {
+.ambiance-button {
 	background-color: #5a9e9e;
 	color: #000;
-	font-size: 3.5em;
-	font-weight: bold;
-	padding: 10px 20px;
-	width: 400px;
-	height: 180px;
-	border: 2px solid #333;
-	border-radius: 15px;
+	font-family: Caprasimo, sans-serif;
+	font-size: 4em;
+	font-weight: 400;
+	padding: 30px 20px;
+	width: 500px;
+	height: 300px;
+	border: 5px solid #333;
+	border-radius: 50px;
 	cursor: pointer;
 	transition: background-color 0.3s, transform 0.2s;
 }
 
 /* Hover effect for buttons */
-.location-button:hover {
+.ambiance-button:hover {
 	background-color: #4b8c8c;
 	transform: scale(1.05);
 }

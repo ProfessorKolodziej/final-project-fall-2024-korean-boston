@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Update your description here" />
-	<title>Choose a Location</title>
+	<title>Choose a Price</title>
 	<link href="css/filter3.css" rel="stylesheet">
 </head>
 
@@ -19,25 +19,7 @@
 			<a href="results.html"><button class="price-button">$$$</button></a>
 		</div>
 	</main>
-
-
-	<script>
-		const urlParams = new URLSearchParams(window.location.search);
-
-		const links = document.querySelectorAll('a[href="results.html"]');
-		links.forEach(link => {
-			const button = link.querySelector('button');
-			const buttonValue = button ? button.textContent : '';
-			let newHref = link.href;
-			if (urlParams.toString()) {
-				newHref += `?${urlParams.toString()}`;
-			}
-			if (buttonValue) {
-				newHref += `${urlParams.toString() ? '&' : '?'}price=${encodeURIComponent(buttonValue)}`;
-			}
-			link.href = newHref;
-		});
-	</script>
+	<script src="js/scripts.js"></script>
 
 </body>
 
