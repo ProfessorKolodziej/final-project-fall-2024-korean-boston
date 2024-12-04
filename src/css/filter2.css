@@ -10,7 +10,7 @@ body {
 	height: 100vh;
 	margin: 0;
 	position: relative;
-	border: 25px solid #5a9e9e;
+	border: 10px solid #5a9e9e;
 	/* Outer teal border */
 	box-sizing: border-box;
 	/* Ensure border is included in dimensions */
@@ -26,10 +26,11 @@ body {
 /* Title styling */
 h1 {
 	font-family: Caprasimo, sans-serif;
-	font-weight: 400;
-	font-size: 9em;
+	font-weight: 100;
+	font-size: 4em;
 	color: #5a9e9e;
-	margin-bottom: 140px;
+	margin-bottom: 60px;
+	margin-top: 5px;
 }
 
 /* Styling for the list of buttons */
@@ -37,7 +38,7 @@ h1 {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 70px;
+	gap: 40px;
 	padding: 0;
 	list-style-type: none;
 	text-decoration: none;
@@ -53,13 +54,13 @@ h1 {
 	background-color: #5a9e9e;
 	color: #000;
 	font-family: Caprasimo, sans-serif;
-	font-weight: 400;
-	font-size: 4em;
-	padding: 50px 20px;
-	width: 450px;
-	height: 500px;
-	border: 5px solid #333;
-	border-radius: 70px;
+	font-weight: 200;
+	font-size: 1.2em;
+	padding: 20px 10px;
+	width: 150px;
+	height: 160px;
+	border: 3px solid #333;
+	border-radius: 30px;
 	cursor: pointer;
 	text-align: center;
 	display: flex;
@@ -72,12 +73,12 @@ h1 {
 
 /* Image styling for proper sizing */
 .dish-button img {
-	width: 250px;
+	width: 150px;
 	/* Adjust image size */
-	height: 250px;
+	height: 70px;
 	object-fit: contain;
 	/* Ensure image doesn't get distorted */
-	margin-bottom: 10px;
+	margin-bottom: 4px;
 	/* Add spacing below the image */
 }
 
