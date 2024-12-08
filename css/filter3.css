@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+
+
+/* General body and container styling */
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-color: #f5e9d7;
+	border: 10px solid #5a9e9e;
+	/* Outer teal border */
+	box-sizing: border-box;
+	/* Ensure border is included in dimensions */
+	padding: 20px;
+	/* Space between content and border */
+}
+
+.content-container {
+	text-align: center;
+	width: 100%;
+	max-width: 1280px;
+}
+
+/* Title styling */
+h1 {
+	font-family: Caprasimo, sans-serif;
+	font-weight: 100;
+	font-size: 4em;
+	color: #67a9a6;
+	margin-bottom: 80px;
+	margin-top: 10px;
+}
+
+
+.price-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+}
+
+/* Price button styling */
+.price-button {
+	font-family: 'Georgia', serif;
+	font-size: 4em;
+	font-family: Caprasimo, sans-serif;
+	color: #000;
+	background-color: #67a9a6;
+	border: 3px solid #000;
+	border-radius: 40px;
+	padding: 30px 20px;
+	margin: 20px 15px;
+	cursor: pointer;
+	width: 170px;
+	height: 190px;
+	transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Button icon styling */
+.price-button::before {
+	font-size: 2em;
+	display: block;
+}
+
+.price-button:hover {
+	background-color: #55898d;
+	transform: scale(1.05);
+}
+
+/* Remove button outline */
+.price-button:focus {
+	outline: none;
+}
